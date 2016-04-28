@@ -9,7 +9,7 @@ var contatosPage = function(){
 	};
 
 	this.obterTotalDeItensDaLista = function(){
-		return element.all(by.repeater('contato in contatos')).count();
+		
 	};
 
 	this.removerPrimeiroItemDaLista = function(){
