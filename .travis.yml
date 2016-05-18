@@ -17,7 +17,7 @@ before_install:
   - npm install -g protractor@1.5
   - webdriver-manager update
   - sudo apt-get install xvfb
-  - Xvfb -ac :5 -screen 0 1600x1200x24+32
+  - Xvfb -ac :5 -screen 0 1600x1200x24+32 > /dev/null 2>&1 &
   - bower install
 before_script:
   - node test/data.js
