@@ -15,9 +15,8 @@ before_install:
   - npm install -g grunt-cli@0.1
   - npm install -g karma-cli@0.0
   - npm install -g protractor@1.5
-  - sudo apt-get install xvfb
-  - Xvfb :1 -screen 1 1600x1200x32
   - webdriver-manager update
+  - webdriver-manager start
   - bower install
 before_script:
   - node test/data.js
