@@ -1,12 +1,18 @@
-var MongoClient = require('mongodb').MongoClient;
-var ObjectID = require('mongodb').ObjectID;
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://127.0.0.1:27017/freshdesk');
 
-var _idProcurado = new ObjectID('57058824e8cdd308beb58200');
+var db = mongoose.connection;
 
-MongoClient.connect('mongodb://127.0.0.1:27017/contatooh', function(erro, db){
-	if(erro) throw err;
-	db.collection('contatos').findOne({_id : _idProcurado}, function(erro, contato){
-		if(erro) throw err;
-		console.log(contato);
-	});
+var TicketSchema = mongoose.Schema({
+
+});
+
+var Ticket = mongoose.model('Ticket', TicketSchema);
+
+Ticket.find()
+.where({ descricao: { $in: [/009fd/]}})
+.where("hora_criacao", { $gt: '2016-04-10', $lt: '2016-04-19'})
+.select('id')
+.exec(function(err, tickets){
+	console.log(tickets);
 });
