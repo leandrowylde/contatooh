@@ -5,6 +5,7 @@ exports.config = {
 	sauceKey: config.sauceKey,
 	capabilities: {
 		'name': config.sauceTestName,
+		'browserName': 'PhantomJS',
 		'tunnel-identifier': config.travisJobNumber,
 		'build': config.travisBuild
 	},
