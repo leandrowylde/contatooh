@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var passport = require('passport');
 var helmet = require('helmet');
+var morgan = require('morgan');
 
 module.exports = function(){
 	var app = express();
@@ -22,6 +23,7 @@ module.exports = function(){
 	app.use(helmet.xframe());
 	app.use(helmet.xssFilter());
 	app.use(helmet.nosniff());
+	app.use(morgan('dev'));
 	app.disable('x-powered-by');
 	load('models', {cwd: 'app'})
 		.then('controllers')
