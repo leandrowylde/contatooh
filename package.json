@@ -26,7 +26,8 @@
     "mongoose": "^4.4.14",
     "mongoose-findorcreate": "^0.1.2",
     "passport": "^0.2.2",
-    "passport-github": "^0.1.5"
+    "passport-github": "^0.1.5",
+    "morgan": "1.7.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

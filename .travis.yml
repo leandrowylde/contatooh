@@ -2,7 +2,7 @@ language: node_js
 notifications:
   - leandro.wylde@gmail.com
 node_js:
-  - 0.10
+  - 6.2.2
 services:
   - mongodb
 env:
@@ -16,8 +16,6 @@ before_install:
   - npm install -g karma-cli@0.0
   - npm install -g protractor@1.5
   - webdriver-manager update
-  - sudo apt-get install xvfb
-  - Xvfb -ac :5 -screen 0 1600x1200x24+32 > /dev/null 2>&1 &
   - bower install
 before_script:
   - node test/data.js
