@@ -16,7 +16,7 @@ before_install:
   - npm install -g karma-cli@0.0
   - npm install -g protractor@1.5
   - webdriver-manager update
-  - webdriver-manager start
+  - webdriver-manager start > /dev/null 2>&1
   - bower install
 before_script:
   - node test/data.js
