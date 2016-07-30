@@ -1,5 +1,4 @@
 language: node_js
-os: osx
 notifications:
   - leandro.wylde@gmail.com
 node_js:
