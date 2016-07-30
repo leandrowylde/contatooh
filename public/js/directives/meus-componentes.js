@@ -12,7 +12,8 @@ angular.module('meusComponentes', []).directive('meuPainel', function(){
 	directive.templateUrl = 'js/directives/meus-componentes/meu-painel.html';
 
 	return directive;
-}).directive('meuBotaoAviso', function(){
+})
+.directive('meuBotaoAviso', function(){
 	var directive = {};
 
 	directive.restrict = 'E';
@@ -26,6 +27,23 @@ angular.module('meusComponentes', []).directive('meuPainel', function(){
 	'<button ng-click="acao()" class="btn btn-warning">'
 	+ '{{nome}}'
 	+ '</button>';
+
+	return directive;
+})
+.directive('meuFocus', function(){
+	var directive = {};
+
+	directive.restrict = 'A';
+
+	directive.scope = {
+		evento: '@'
+	};
+
+	directive.link = function(scope, element) {
+		scope.$on(scope.evento, function(){
+			element[0].focus();
+		});
+	};
 
 	return directive;
 });
