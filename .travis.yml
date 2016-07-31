@@ -15,9 +15,7 @@ before_install:
 - npm install -g grunt-cli@0.1
 - npm install -g karma-cli@0.0
 - npm install -g protractor@1.5
-- npm install -g bson
 - webdriver-manager update
-- webdriver-manager start &
 - bower install
 before_script:
 - node test/data.js
@@ -31,7 +29,7 @@ deploy:
   password:
     secure: 3DTPn/L5okCg7SSAG2uUYnYTq3YFymQKrw/WtpPOBfXZxCopityGxnnDmuoP2xsAeV6FtGCx/enJQN0NAqv6yulHFKm3m+2Abtf+Ol/EvM85K1/cPpGM7afirjtSeFKxAi4Yt+NX0Cnev/S/XFvAXLpAeETdDVeS+dwDWwrJHm9MEfgcUrzie5CdNSwIBAi0MVdntyFLHuHtcvBYFM6v8hWCeWz3MnnRh+QrWUr8GQdeWL11+w5WZ9Mfbsyah4uN/EAZhjpC/wtwZmzyXaVrYmIdasg8kjXYxsriLdP7NqY1wkkFYHPRp141ocJGO7+Yw0tk/5ZbZ/8zH0xhiY12jpVTD53nsGoqJN7g+3GOhwHE7oQHrPWLXRQfTwAnWj1GPYib2TqIcCgEwPGLJ4P/oUO3Bjfa4iwN21nWnqZU1wkQaxxktB2QMiYCh4nv9mHYvrWxOnCLP/Fq08PW/0ZimAyOdbc8cOHAZS43Y0B+t0sIBpfjGz9ktHF9LZX2AnCr6MUnaF2a0FA6zBST1jSw8IxtKkRZ/Nz5P7ALx5JsNLw2H9wjjCNqojuVowlLNfHpye0fdzvx2Ltb6RN8l1yP8dZslsLgKJcNlsm+vnDvILXW+kigqMtBspNbd4pSMKqlrPnMK4Pqm8hFWB3cNHGV4MGKbDsEd5/pwnS91a3cYuA=
   app: contatooh
-  domain: http://contatooh-contatooh3636427.rhcloud.com
+  domain: contatooh-contatooh3636427.rhcloud.com
   on:
     repo: leandrowylde/contatooh
 before_deploy:
