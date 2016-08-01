@@ -24,7 +24,6 @@ before_script:
 - sleep 10
 script:
 - karma start config/karma.config.js --single-run --browsers PhantomJS
-- protractor config/protractor.js
 deploy:
   provider: openshift
   user: leandro.wylde@gmail.com
